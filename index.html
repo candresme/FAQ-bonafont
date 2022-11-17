@@ -13,28 +13,72 @@
     <style>
         body{
             font-family: 'Poppins', sans-serif;
+            margin:0;
+            padding: 0;
+            position: relative;
         }
+        
+        picture img {
+          width: 100%;
+          position:relative;
+        }
+        .box{          
+          position: absolute;
+          top:10%;
+          left: 60%;
+          z-index: 1;
+          padding: 5px;
+        } 
+
+        .box h1{
+          font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 1049px){        
+          .box{
+            top:8%;
+            left: 56%;
+          } 
+        }  
+
+        @media only screen and (max-width: 465px){        
+          .box{
+            top:5%;
+            left: 56%;        
+          } 
+
+          .box h1{
+          font-size: 1rem;
+          }
+
+          .box p{
+          font-size: 0.8rem;
+          }
+        }  
+
     </style>
 
 </head>
 <body>   
-    <div class="container text-center">
 
-        <div class="row justify-content-center p-5">
-            <div class="col p-5">
-                <img src="./img/bonafont_logo.webp" alt="logo bonafont" width="200rem" />
-            </div>
-        </div>
+    <div>
+      <div class="box">
+        <h1>
+          Preguntas frecuentes
+        </h1>
+        <p>
+          Encuentra aquí el centro de ayuda para solucionar cualquiera de tus inquietudes.
+        </p>
+      </div>
+      
+      <picture >
+        <source media="(min-width: 768px)" srcset="./img/desktop.gif" >
+        <source media="(max-width: 767px)" srcset="./img/movile.gif" >
+        <img src="./img/desktop.gif">
+      </picture>
+    </div>
 
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 col-sm-12">
-                <img src="./img/FAQ_Mesa de trabajo 1.svg" alt="Preguntas frecuentes Bonafont" width="100%"/>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <h1 style="font-family: 'Poppins', sans-serif; font-weight: 800;">Centro de ayuda</h1>
-                <h4>Encuentra aquí el centro de ayúda</h4>
-            </div>
-        </div>
+    <div class="container-fluid text-center">
 
         <div class="row text-start">
             <div class="col p-5">
